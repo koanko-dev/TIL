@@ -1,7 +1,3 @@
-<style>
-point {color:salmon; font-weight: bold;}
-</style>
-
 # git 기본 사용법
 
 <br>
@@ -172,7 +168,7 @@ git checkout <commit-id or branch>
 
 master과 HEAD가 합쳐져 새로운 커밋을 작성할 준비가 되었습니다.
 
-<point>checkout 주의사항</point>  
+### checkout 주의사항  
 위에서 본 것처럼 HEAD를 master와 분리해 다른 커밋으로 `checkout`한 뒤, 마지막 커밋으로 다시 HEAD를 돌리고 싶을 때가 있습니다.  
 이때, HEAD를 마지막 커밋으로 `checkout`하게 되면 HEAD와 master가 분리됩니다. 때문에 HEAD를 버전 자체로 `checkout`하면 안됩니다.
 
