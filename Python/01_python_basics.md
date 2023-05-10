@@ -207,9 +207,9 @@ print(i + c, type(i + c))
 int() # string, float => int 변환
 float() # string, int => float 변환
 str() # int, float, list, tuple, dictionary => str 변환
-list() # string, tuple, range, set, dictionary(key) =>  list 변환
-tuple() # string, list, range, set, dictionary(key) =>  list 변환
-set() # string, list, range, tuple, dictionary(key) =>  list 변환
+list() # string, tuple, range, set, dictionary(key) => list 변환
+tuple() # string, list, range, set, dictionary(key) => tuple 변환
+set() # string, list, range, tuple, dictionary(key) => set 변환
 ```
 
 <br>
