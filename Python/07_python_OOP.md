@@ -1,4 +1,4 @@
-# OOP
+# Python OOP & Class
 
 ## 객체 지향 프로그래밍(Object-Oriented Programming)
 말 그대로 객체(Object)가 중심이 되는 프로그래밍을 뜻합니다.  
