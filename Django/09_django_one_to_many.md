@@ -49,6 +49,9 @@ migrations 폴더 안을 보면 `makemigrations` 할 때마다 0001..., 0002... 
 아티클 테이블과 연결할 새로운 댓글 테이블을 생성한다면, 각각의 댓글 레코드 안에 아티클의 id를 추가하면 됩니다.  
 이 아티클의 id를 Primary Key(고유키)라고 합니다. Primary Key(고유키)값을 댓글 레코드의 Foreign Key(외래키) 자리에 넣으면 됩니다.  
 
+테이블 열에 foreign key 값이 있으면, 쉽게 말해 주종관계가 있는 것이라고 보면 됩니다.  
+foreign key 값이 있는 테이블이 '종', 상대 테이블이 '주' 라고 생각하면 쉽습니다.  
+
 <br>
 
 ### 새로운 테이블 생성
@@ -111,6 +114,11 @@ for comment in a1.comment_set.all():
 # 'comment 2'
 # 'comment 3'
 ```
+
+<br>
+
+### ERD(Entity-Relationship modelling)
+ERD는 엔티티(쉽게 말해 테이블)의 관계를 나타내는 것입니다.  컬럼명과 타입 및 비고를 간단하게 표로 작성하여 엔티티를 나타내고, 엔티티 사이의 관계를 크로우즈 풋으로 나타냅니다.  
 
 <br>
 
