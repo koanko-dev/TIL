@@ -63,6 +63,32 @@ Student 테이블의 모든 레코드를 가져오기 위해서 `Student.objects
 ![](./img/database_objectall.png)
 
 <br>
+
+### `choices` 옵션
+스키마를 작성하며 `choices` 옵션을 줄 수도 있습니다.  
+`choices`를 사용하면 유저가 정해진 선택지 안에서만 필드를 작성 가능하도록 제한을 줄 수 있습니다.  
+```python
+class User(AbstractUser):
+    MBTI_CHOICES = [
+        # 첫번째 자리는 DB에 저장할 코드, 두번째는 유저에게 보여줄 코드
+        ('entj', 'ENTJ'),
+        ('isfp', 'ISFP'),
+        ('enfp', 'ENFP'),
+        ('infj', 'INFJ'),
+    ]
+
+    mbti = models.CharField(max_length=4, choices=MBTI_CHOICES)
+```
+위처럼 모델 파일에서 설정할 수도 있고, 모델폼에서도 설정할 수 있습니다.  
+
+변경 후 `makemigrations`을 하게 되면 Alter field 라고 뜹니다.  
+이처럼 변경 사항이 있는 경우, `migrate` 해야 합니다.  
+반면 No Changes 라고 하는 경우, 당연히 `migrate`을 할 필요가 없습니다.
+
+변경 사항으로 받아들여질 수 있는 부분이 추가되었는지, 아닌지는 판단하기 어려울 수 있습니다.  
+**즉, 모델에서 어떤 변경이든 일어나면 `makemigrations`을 해보는 것이 안전하다는 의미입니다.**
+
+<br>
 <br>
 
 ## 요약
@@ -73,5 +99,3 @@ Student 테이블의 모든 레코드를 가져오기 위해서 `Student.objects
 4. `migrate`해 실제 테이블을 생성합니다.
 
 <br>
-
-
