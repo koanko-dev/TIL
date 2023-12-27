@@ -2,11 +2,11 @@
 prop 값을 지정하지 않고도 컴포넌트에 컨텐츠를 전달할 수 있습니다.  
 바로 `children` prop을 사용하는 겁니다.
 
-|![](img/react7_2.png)|
+|![app component](img/react7_2.png)|
 |:--:|
 |App 컴포넌트의 return 부분|
 
-|![](img/react7_1.png)|
+|![tabbutton component](img/react7_1.png)|
 |:--:|
 |TabButton 컴포넌트|
 
@@ -20,11 +20,11 @@ prop 값을 지정하지 않고도 컴포넌트에 컨텐츠를 전달할 수 �
 
 `children` prop을 사용하지 않고 속성을 사용할 수도 있습니다.
 
-|![](img/react7_3.png)|
+|![app component](img/react7_3.png)|
 |:--:|
 |App 컴포넌트의 return 부분|
 
-|![](img/react7_4.png)|
+|![tabbutton component](img/react7_4.png)|
 |:--:|
 |TabButton 컴포넌트|
 
