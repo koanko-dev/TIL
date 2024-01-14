@@ -47,7 +47,7 @@ Visual Studio Code에서 작업중인데, IDE에서 `.ts` 파일 안의 작업�
 
 느낌표를 추가하니 요소에 대한 오류가 사라졌습니다.  
 추가로, 타입스크립트에서 `as`를 사용해 요소가 어떤 타입의 요소인지 알려줄 수 있습니다.  
-```javascript
+```typescript
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 ```
 `as`는 당연히 일반 자바스크립트에서는 불가능합니다.  
@@ -63,7 +63,7 @@ const input1 = document.getElementById("num1")! as HTMLInputElement;
 
 이렇게 모든 오류를 없애고, 타입스크립트 컴파일러가 실행되도록 명령어를 입력합니다.
 ```bash
-// tsc <typescript-file-name>.ts
+# tsc <typescript-file-name>.ts
 tsc app.ts
 ```
 
