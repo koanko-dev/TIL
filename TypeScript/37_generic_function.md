@@ -1,4 +1,4 @@
-# Creating a Generic Function
+# 제네릭 함수 생성하기
 
 직접 제네릭 만들어야 할 필요성을 느낄 수 있는 예시를 먼저 들어보겠습니다.
 ![제네릭 필요성 예시](img/ts37_1.png)
@@ -35,5 +35,40 @@
 
 그리고 `merge` 함수는 두 파라미터를 합쳐서 반환하니, 객체 둘을 합쳐서 추론하게 됩니다.  
 결론적으로, 이제는 합친 객체의 속성도 추론할 수 있게 된 겁니다.
+
+### 다른 제네릭 함수 예시
+
+다른 제네릭 함수 예시를 들어보겠습니다.
+
+```typescript
+interface Lengthy {
+  length: number;
+}
+
+function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
+  let descriptionText = "Got no value";
+
+  if (element.length === 1) {
+    descriptionText = "Got 1 element.";
+  } else if (element.length > 1) {
+    descriptionText = "Got " + element.length + " elements.";
+  }
+
+  return [element, descriptionText];
+}
+
+// 문자열 사용
+console.log(countAndDescribe("Hi there"));
+// ['Hi there', 'Got 8 elements.']
+
+// 배열 사용
+console.log(countAndDescribe(["Sports", "Cooking"]));
+// [Array(2), 'Got 2 elements.']
+
+// 숫자 사용
+console.log(countAndDescribe(3)); // error
+```
+
+문자열과 배열은 length 속성을 가지고 있기에 `T` 타입에 적합하여 `countAndDescribe` 함수에서 사용할 수 있습니다.
 
 <br/>
